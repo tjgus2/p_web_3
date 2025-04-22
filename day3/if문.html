@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문</title>
+</head>
+<body>
+    <script>
+        let userNum = prompt("좋아하는 숫자를 입력하세요");
+
+        if (userNum % 2 == 0) {
+            document.write("짝수입니다 ");
+        } else {
+            document.write("홀수입니다 ");
+        }
+
+        let confirmNum = confirm("탈퇴하시겠습니끼?");
+        if (confirmNum) {
+            document.write("탈탈퇴되었습니다");
+        } else {
+            document.write("탈퇴 취소되었습니다");
+        }
+    </script>
+</body>
+</html>
