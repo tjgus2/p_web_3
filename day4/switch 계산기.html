@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch 계산기</title>
+</head>
+
+<body>
+    <script>
+        let num1 = Number(prompt("첫번째 숫자를 입력하세요"));
+        let operator = prompt("연산자를 입력하세요", "+, -, * , /, % 중 택 1");
+        let num2 = Number(prompt("두번째 숫자를 입력하세요"));
+
+        switch (operator) {
+            case "+": document.write(`결과: ${num1 + num2}`);
+                break;
+            case "-": document.write(`결과: ${num1 - num2}`);
+                break;
+            case "*": document.write(`결과: ${num1 * num2}`);
+                break;
+            case "/": {
+                if (num2 != 0) {
+                    document.write(`결과: ${num1 / num2}`);
+                    break;
+                } else {
+                    document.write("입력받은 숫자가 0이라면 0으로나눌 수 없습니다.")
+                }
+            }
+            case "%": document.write(`결과: ${num1 % num2}`);
+                break;
+        }
+    </script>
+</body>
+
+</html>
