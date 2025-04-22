@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dday</title>
+</head>
+<body>
+    <script>
+        let today = new Date();
+        let nowYear = today.getFullYear();
+        
+        let theDate = new Date(nowYear, 11, 3);
+        let dDay = theDate.getTime() - today.getTime();
+
+        let result = Math.ceil(dDay/(1000 * 60 * 60 * 24));
+
+        document.write(`연말 D-day: ${result}일 남았습니다`);
+    </script>
+</body>
+</html>
