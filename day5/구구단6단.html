@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .even {
+            color: blue;
+        }
+        .odd {
+            color: red;
+        }
+    </style>
+    <title>구구단6단</title>
+</head>
+<body>
+    <script>
+        let i = 20;
+        while (i >= 10) {
+            if (i % 2 == 0) {
+                document.write("<p class='even'>" + i + "</p>");
+            }
+            else {
+                document.write("<p class='odd'>" + i + "</p>");
+            }
+            i--;
+        }
+    </script>
+</body>
+</html>
