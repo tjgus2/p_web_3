@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>가위바위보 게임</h1>");
+        let userChoice = prompt("가위, 바위, 보 중 하나를 입력하세요");
+        let randomNum = Math.ceil(Math.random()*3);
+        let computerChoice;
+
+        if (randomNum == 1) {
+            computerChoice = "가위";
+        }
+        else if (randomNum == 2) {
+            computerChoice = "바위";
+        }
+        else {
+            computerChoice = "보";
+        }
+
+        if (userChoice == computerChoice) {
+            document.write(`비겼다! 컴퓨터도 ${computerChoice}를 냈다람쥐~~`);
+        }
+        else if (
+            (userChoice == "가위" && computerChoice == "보") || (userChoice == "보" && computerChoice == "바위") || (userChoice == "바위" && computerChoice == "가위")
+        ) {
+            document.write(`축하포카 사용자가 이겼다람지~~~ 컴퓨터 : ${computerChoice}`);
+        }
+        else {
+            document.write(`아쉽다람지!!!!!!! 컴퓨터가 이겼다람쥐~컴퓨터 : ${computerChoice}`)
+        }
+    </script>
+</body>
+</html>
