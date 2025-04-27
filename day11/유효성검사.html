@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유효성검사</title>
+</head>
+<body>
+    <script>
+        let userEmail = prompt("이메일을 입력하세요");
+        let arrUrl = ['.net', '.com'];
+        let check1 = false;
+        let check2 = false;
+
+        if (userEmail.indexOf("@") > 0) {
+            check1 = true;
+        }
+
+        for (let i = 0; i<arrUrl.length; i++) {
+            if (userEmail.indexOf(arrUrl[i]) > 0) {
+                check2 = true;
+            }
+        }
+
+        if (check1 && check2) {
+            document.write(`${userEmail}은 사용가능한 이메일입니다`);
+        } else {
+            document.write("이메일 형식이 잘못되었습니다");
+        }
+    </script>
+</body>
+</html>
