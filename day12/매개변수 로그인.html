@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개변수 로그인</title>
+</head>
+
+<body>
+    <script>
+        let id = "qwe1234";
+        let pw = "1234qwe";
+
+        let userId = prompt("아이디를 입력하세요");
+        let userPw = prompt("비밀번호를 입력하세요");
+
+        function login(userId, userPw) {
+            if (id == userId) {
+                if (pw == userPw) {
+                    document.write("로그인 되었습니다");
+                } else {
+                    document.write("비밀번호 불일치");
+                }
+            }
+            else {
+                document.write("아이디 불일치");
+            }
+        }
+
+        login(userId, userPw);
+        
+    </script>
+</body>
+
+</html>

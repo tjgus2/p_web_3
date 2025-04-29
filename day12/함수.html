@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <script>
+        let count = 0;
+        function firstFunction() {
+            count++;
+            document.write(`안녕하세요 ${count}<br>`);
+        }
+
+        firstFunction();
+
+        let secondFunction = function() {
+            count++;
+            document.write(`안녕히계세요 ${count}<br>`);
+        }
+
+        secondFunction();
+    </script>
+</body>
+</html>
