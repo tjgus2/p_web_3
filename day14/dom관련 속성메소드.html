@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom관련속성메소드</title>
+</head>
+<body>
+    <div id="only_one_id">하나뿐인 아이디를 가진 요소</div>
+
+    <div>
+        <p class="class_text">hi1</p>
+        <p class="class_text">hi2</p>
+        <p class="class_text">hi3</p>
+    </div>
+
+    <script>
+        const onlyOneId = document.getElementById("only_one_id");
+        console.log(onlyOneId);
+
+        const classText = document.getElementsByClassName("class_text");
+        console.log(classText);
+        console.log(classText[2]);
+
+        const queryId = document.querySelector("#only_one_id");
+        console.log(queryId);
+
+        const queryClass = document.querySelector(".class_text");
+        console.log(queryClass);
+
+        const queryAll = document.querySelectorAll(".class_text");
+        console.log(queryAll);
+        queryAll.forEach((element) => {
+            console.log(element);
+        })
+
+        const allP = document.getElementsByTagName("p")
+        console.log(allP);
+
+    </script>
+</body>
+</html>

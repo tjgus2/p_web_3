@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고객대기명단</title>
+</head>
+<body>
+    <button id="user_name">고객명입력</button>
+    <button id="user_check">고객명단확인</button>
+    <button id="come_in">입장</button>
+
+    <script>
+        const userName = document.getElementById("user_name");
+        const userCheck = document.getElementById("user_check");
+        const comeIn = document.getElementById("come_in");
+
+        const list = new Array();
+
+        userName.addEventListener("click", function() {
+            list.push(prompt("대기자 명단을 입력하세요"));
+        })
+
+        function listName() {
+            if (list.length) {
+                alert(`현재 대기자는 ${list}이며, 총 ${list.length}명 입니다`);
+            } else {
+                alert(`대기가 없습니다`);
+            }
+        }
+
+        userCheck.addEventListener("click", listName);
+
+        function come() {
+            if (list.length) {
+                alert(`${list.shift()}님 입장합니다. 대기 인원은 ${list.length}명 입니다`);
+            }
+            else {
+                alert("입장할 손님이 없습니다");
+            }
+        }
+
+        comeIn.addEventListener("click", come);
+    </script>
+</body>
+</html>
