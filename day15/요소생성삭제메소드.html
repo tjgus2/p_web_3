@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소생성삭제메소드</title>
+</head>
+<body>
+    <section id="container">
+        <p class="reference">기준이 되는 요소</p>
+        <p class="old_node">교체될 요소</p>
+        <p class="remove_child">삭제할 요소</p>
+    </section>
+    
+    <script>
+        const section = document.getElementById("container");
+
+        const newDiv = document.createElement('div');
+        newDiv.textContent = "새로운 div 추가"
+        section.appendChild(newDiv);
+
+        const newDiv2 = document.createElement('div');
+        newDiv2.textContent = "맨 앞에 추가될 요소";
+        section.prepend(newDiv2);
+
+        const newDiv3 = document.createElement('div');
+        newDiv3.textContent = "기준 요소 앞에 추가";
+        const reference = document.getElementsByClassName("reference")[0];
+        section.insertBefore(newDiv3, reference);
+
+        const newDiv4 = document.createElement('div');
+        newDiv4.textContent = "새로운 요소";
+        const oldNode = document.getElementsByClassName("old_node")[0];
+        section.replaceChild(newDiv4, oldNode);
+
+        const removeChild = document.getElementsByClassName("remove_child")[0];
+
+        removeChild.remove();
+    </script>
+</body>
+</html>
