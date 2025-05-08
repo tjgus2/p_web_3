@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이드인헤더</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 5000px;
+        }
+
+        header {
+            height: 80px;
+            background-color: aqua;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        header.hide {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        .lorem {
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <div class="lorem">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid recusandae quisquam dolorem, illo officia repellendus nulla doloribus nobis perferendis dignissimos ullam enim quas, ut, quo harum quasi. Deserunt, odio quidem?
+    </div>
+
+    <script>
+        const header = document.querySelector("header");
+
+        let posY = 0;
+
+        window.addEventListener("scroll", (e) => {
+            if (posY < window.scrollY) {
+                header.classList.add("hide");
+            }
+            else {
+                header.classList.remove("hide");
+            }
+        })
+    </script>
+</body>
+</html>
